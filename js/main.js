@@ -84,12 +84,11 @@ background:rgb(255,0,0);
 
 /*我打算把大白放在红纸中央 */
 
-/*所以居中定个位,给了蓝框*/
+/*所以居中定个位*/
 
 .wrapper{
 height:14rem;
 width:10rem;
-border:2px solid blue;
 position: absolute;
 top:50%;
 left:50%;
@@ -149,7 +148,7 @@ right:20%;
 
 .eye-line{
 position: absolute;
-border-top:2px solid black;
+border-top:1px solid black;
 width:2rem;
 top:1.48rem;
 left:20%;
@@ -168,7 +167,7 @@ border-radius:50% 50% 50% 50%
 z-index: 5;
 }
 
-/*加点立体感*/
+/*需要点立体感*/
 
 .baymax-body{
 background:linear-gradient
@@ -270,11 +269,6 @@ border-radius:0% 0% 50% 30%
 }
 
 /*一只大白画完了*/
-/*蓝框可以去掉了 */
-
-.wrapper{
-    border:2px soild transparent;
-}
 
 /*喜不喜欢？*/
 /*对了，我叫余咖咖*/
