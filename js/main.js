@@ -1,305 +1,285 @@
+var pageWidth=window.innerWidth  //获取屏幕宽度
+document.documentElement.style.fontSize= `${pageWidth/60}px`
 
 var styleCode = `/*
- *余咖咖今天准备画一只大白*/
+*hello,我叫余咖咖
 
- *{
-    transition:all 1s;
- }
- html{
-    background: rgb(222,222,222);
-    font-size:13px;
- }
+*今天准备画一只大白*/
+
+*{
+transition:all 1s;
+}
+
+html{
+background: rgb(222,222,222);
+}
 
 /*我想要一个边框,给边框加个padding*/
 
 #code{
-    border:1px solid red;
-    padding:15px;
+border:2px solid black;
+padding:1rem;
 }
 
-/*有个边框还不够，我想再给代码做个高亮*/
+/*可是有个边框还不够*/
+
+/*我想再给代码做个高亮*/
 
 .token.comment{
-    color :slategray; 
-}
-.token.selector{
-    color :#690;
-}
-.token.punctuation{
-    color :#905;   
-}
-.token.property{
-    color :#DD4A68;    
+color :slategray; 
 }
 
-/*是不是很好玩，来一个七彩页面闪一闪*/
+.token.selector{
+color :#690;
+}
+
+.token.punctuation{
+color :#905;   
+}
+
+.token.property{
+color :#DD4A68;    
+}
+
+/*好玩吗？*/
+
+/*来一个七彩页面闪一闪*/
 
 html{
-    background:red;
-    background:orange;
-    background:yellow;
-    background:green;
-    background:blue;
-    background:purple;
-    background: rgb(222,222,222);
- }
-
- /*好了，现在开始画一只大白了*/
-
- /*我需要一张红底的纸*/
-
- .paper{
-    position:fixed;
-    top:0;
-    right:0;
-    height:100vh;
-    width:60%;
-    background:red;
-    border:1px solid blue;
- 
+background:red;
+background:orange;
+background:yellow;
+background:green;
+background:blue;
+background:purple;
+background-color: rgb(222,222,222);
 }
 
+/*让页面旋转360度 */
 
-.wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .head {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    width: 80px;
-    height: 55px;
+#code{
+    transform:rotate(360deg);
+}
 
-    transform: translate(-50%, 0);
-    border-radius: 100%;
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    z-index: 9999;
-    box-shadow: -6px -6px 20px 0 rgb(150, 150, 150) inset;
-  }
-  
-  .eye {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: black;
-    border-radius: 50%;
-  }
-  
-  .left-eye {
-    top: 40%;
-    left: 65%;
-  }
-  
-  .right-eye {
-    top: 40%;
-    left: 23%;
-  }
-  
-  .eye-connect {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    width: 30px;
-    height: 1px;
-    background: black;
-  }
-  
-  .torso {
-    position: relative;
-    display: block;
-    width: 200px;
-    height: 270px;
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
-    overflow: hidden;
-    box-shadow: -15px -15px 40px 0 rgb(150, 150, 150) inset;
-    z-index: 999
-  }
-  
-  .access-port {
-    position: absolute;
-    top: 47px;
-    left: 62%;
-    width: 18px;
-    height: 18px;
-    background: rgb(245, 245, 245);
-    background: linear-gradient(to right, rgb(245, 245, 245), rgb(235, 235, 235));
-    border-right: 1px solid rgb(210, 210, 210);
-    border-bottom: 1px solid rgb(210, 210, 210);
-    border-radius: 50%;
-  }
-  
-  .access-port-seam {
-    position: relative;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: rgb(220, 220, 220);
-  }
-  
-  .torso-pad {
-    position: absolute;
-    top: 80px;
-    width: 20px;
-    height: 70px;
-    background: rgba(210, 180, 180, .3);
-    border-radius: 100%;
-  }
-  
-  .right-torso-pad {
-    left: -5px;
-    transform: rotateZ(8deg);
-  }
-  
-  .left-torso-pad {
-    right: -5px;
-    transform: rotateZ(8deg);
-  }
-  
-  .right-leg {
-    position: absolute;
-    top: 60%;
-    left: 20px;
-    width: 80px;
-    height: 170px;
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    z-index: 9999;
-    box-shadow: -6px -6px 20px 0 rgb(150, 150, 150) inset;
-    border-bottom-left-radius: 60%;
-    border-bottom-right-radius: 25%;
-    z-index: 0;
-    overflow: hidden;
-  }
-  
-  .left-leg {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 80px;
-    height: 170px;
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    z-index: 9999;
-    box-shadow: -6px -6px 20px 0 rgb(150, 150, 150) inset;
-    border-bottom-left-radius: 25%;
-    border-bottom-right-radius: 60%;
-    z-index: 0;
-    overflow: hidden;
-  }
-  
-  .thigh-pad {
-    position: absolute;
-    top: 38%;
-    width: 25px;
-    height: 60px;
-    border-radius: 100%;
-    background: rgba(210, 180, 180, .3);
-  }
-  
-  .right-thigh-pad {
-    left: -10px;
-  }
-  
-  .left-thigh-pad {
-    right: -10px;
-  }
-  
-  .foot-pad {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: rgba(210, 180, 180, .3);
-    border-radius: 100%;
-  }
-  
-  .foot-pad::before {
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: 65%;
-    height: 10px;
-    transform: translate(-50%, 0);
-    background: rgba(210, 180, 180, .3);
-    border-radius: 10px;
-  }
-  
-  .right-arm {
-    position: absolute;
-    top: 8px;
-    left: -30px;
-    width: 70px;
-    height: 220px;
-    transform: rotateZ(30deg);
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    box-shadow: -6px -6px 20px 0 rgb(150, 150, 150) inset;
-    border-top-left-radius: 75%;
-    border-bottom-left-radius: 80%;
-    border-bottom-right-radius: 65%;
-    z-index: 99;
-  }
-  
-  .right-thumb {
-    position: absolute;
-    bottom: 0;
-    left: 52px;
-    width: 15px;
-    height: 30px;
-    transform: rotateZ(-43deg);
-    border-top-left-radius: 60%;
-    border-top-right-radius: 30%;
-    border-bottom-right-radius: 40%;
-    border-bottom-left-radius: 40%;
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    box-shadow: -6px -6px 20px 0 rgb(150, 150, 150) inset;
-  }
-  
-  .left-arm {
-    position: absolute;
-    top: 8px;
-    left: 160px;
-    width: 70px;
-    height: 220px;
-    transform: rotateZ(-30deg);
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    box-shadow: -6px -6px 20px 0 rgb(150, 150, 150) inset;
-    border-top-right-radius: 75%;
-    border-bottom-right-radius: 80%;
-    border-bottom-left-radius: 65%;
-  }
-  
-  .left-thumb {
-    position: absolute;
-    bottom: 0;
-    left: 0px;
-    width: 15px;
-    height: 30px;
-    transform: rotateZ(43deg);
-    border-top-left-radius: 30%;
-    border-top-right-radius: 60%;
-    border-bottom-right-radius: 40%;
-    border-bottom-left-radius: 40%;
-    background-color: white;
-    background: linear-gradient(100deg, white, rgb(220, 220, 220));
-    box-shadow: 0px -8px 20px 0 rgb(180, 180, 180) inset;
-  }
-  
- 
+/*好了,不玩了*/
+
+/*开始画大白……*/
+
+/*我需要一张红图纸*/
+
+/*变、变、变*/
+
+#code{
+height:30vh;
+}
+
+.paper{
+position:relative;
+top:0;
+right:0;
+height:70vh;
+width:100%;
+background:rgb(255,0,0);
+}
+
+/*我打算把大白放在红纸中央 */
+
+/*所以居中定个位,给了蓝框*/
+
+.wrapper{
+height:14rem;
+width:10rem;
+border:2px solid blue;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+}
+
+/*先画一个头吧~*/
+
+.head{
+height:3rem;
+width:4rem;
+background:white;
+border-radius:50%;
+position: absolute;
+top:-18%;
+left:50%;
+transform: translateX(-50%);
+z-index: 6;
+}
+
+/*加点阴影*/
+/*因为需要立体感*/
+
+.head{
+background:linear-gradient
+    (135deg, #ffffff 0%,#d2d2d2 100%);
+box-shadow:-0.2rem -0.2rem 0.84rem 0 
+    rgb(150, 150, 150) inset;
+}
+
+/*然后画左眼睛*/
+
+.left-eye{
+position: absolute;
+width:0.6rem;
+height:0.6rem;
+background:black;
+border-radius:50%;
+top:40%;
+left:20%;
+}
+
+/*右眼睛*/
+
+.right-eye{
+position: absolute;
+background:black;
+width:0.6rem;
+height:0.6rem;
+border-radius:50%;
+top:40%;
+right:20%;
+}
+
+/*(●—●)的眼睛有条杠*/
+/*一起实现一下吧*/
+
+.eye-line{
+position: absolute;
+border-top:2px solid black;
+width:2rem;
+top:1.48rem;
+left:20%;
+}
+
+/*好了，头画完了*/
+/*现在画身体*/
+
+.baymax-body{
+position: absolute;
+height:14rem;
+width:10rem;
+background:white;
+border-radius:50% 50% 50% 50% 
+    / 60% 60% 40% 40%;
+z-index: 5;
+}
+
+/*加点立体感*/
+
+.baymax-body{
+background:linear-gradient
+    (135deg, #ffffff 0%,#d2d2d2 100%);
+box-shadow:-0.6rem -0.6rem 1.6rem 0 
+    rgb(150, 150, 150) inset;
+}
+
+/*然后画什么呢？ */
+/*让我想想…… */
+
+
+/*大白的胸章*/
+
+.badge{
+position: absolute;
+height:1rem;
+width:1rem;
+border-radius:50%;
+background: white;
+z-index:7;
+top:20%;
+right:30%;
+box-shadow:1px 0px 1px 
+    rgb(210,210,210);
+}
+
+.badge-line{
+border-top:1px solid 
+    rgb(210,210,210);
+position: absolute;
+width:100%;
+top:50%;
+left:0%
+}
+
+/*还差四肢，先画双臂 */
+
+.left-arm{
+position: absolute;
+height:11.2rem;
+width:3.4rem;
+background:white;
+border-radius:50%;
+background:linear-gradient
+    (135deg, #ffffff 0%,#d2d2d2 100%);
+box-shadow:-0.2rem -0.2rem 0.84rem 0 
+    rgb(150, 150, 150) inset;
+top:0%;
+left:-13%;
+transform: rotate(29deg);
+}
+
+.right-arm{
+position: absolute;
+height:11.2rem;
+width:3.4rem;
+background:white;
+border-radius:50%;
+background:linear-gradient
+    (135deg, #ffffff 0%,#d2d2d2 100%);
+box-shadow:-0.2rem -0.2rem 0.84rem 0 
+    rgb(150, 150, 150) inset;
+top:0%;
+right:-13%;
+transform: rotate(-29deg);
+}
+
+/*再画双腿 */
+
+.left-foot{
+position:absolute;
+height:6.4rem;
+width:4rem;
+background:white;
+background:linear-gradient
+    (135deg, #ffffff 0%,#d2d2d2 100%);
+box-shadow:-0.2rem -0.2rem 0.84rem 0 
+    rgb(150, 150, 150) inset;
+top:72%;
+left:10%;
+border-radius:0% 0% 30% 50%
+    /0% 0% 42% 72%;
+}
+
+.right-foot{
+position:absolute;    
+height:6.4rem;
+width:4rem;
+background:white;
+background:linear-gradient
+    (135deg, #ffffff 0%,#d2d2d2 100%);
+box-shadow:-0.2rem -0.2rem 0.84rem 0 
+    rgb(150, 150, 150) inset;
+top:72%;
+right:10%;
+border-radius:0% 0% 50% 30%
+    /0% 0% 72% 42%;
+}
+
+/*一只大白画完了*/
+/*蓝框可以去掉了 */
+
+.wrapper{
+    border:2px soild transparent;
+}
+
+/*喜不喜欢？*/
+/*对了，我叫余咖咖*/
+
 `
-
 
 var n = 0 
 var id = setInterval(()=>{
@@ -312,11 +292,6 @@ var id = setInterval(()=>{
     code.scrollTop = 10000
     if(n>styleCode.length){
         window.clearInterval(id) 
-        fn2()   
     }
-},0)
+},30)
 
-function fn2(){
-
-
-}
