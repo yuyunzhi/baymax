@@ -4,7 +4,7 @@
     box-sizing:border-box; 
 }
 body{
-    font-size:16px;
+    font-size:15px;
 }
 .token.selector{
     color :black;
@@ -25,5 +25,38 @@ html{
 #code{
     height:100vh;
     overflow:hidden;  
+}
 
+.buttons{
+    display: flex;
+    padding:5px;
+    position: absolute;
+    top:0;
+    right:0;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button{
+    margin-top:10px;
+    width:35px;
+    height:25px;
+    background: #ddd;
+    border:none;
+}
+
+.fast.active{
+    background:#888;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.8)
+}
+
+.slow.active{
+    background:#888;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.8)    
+}
+
+.normal.active{
+    background:#888;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.8)    
 }

@@ -1,3 +1,4 @@
+
 var pageWidth=window.innerWidth  //获取屏幕宽度
 document.documentElement.style.fontSize= `${pageWidth/60}px`
 
@@ -274,7 +275,7 @@ border-radius:0% 0% 50% 30%
 /*对了，我叫余咖咖*/
 
 `
-
+/*
 var n = 0 
 var id = setInterval(()=>{
     n=n+1   
@@ -287,5 +288,42 @@ var id = setInterval(()=>{
     if(n>styleCode.length){
         window.clearInterval(id) 
     }
-},30)
+},30)*/
 
+
+var n = 0 
+var during = 100
+var id = setTimeout(function fn(){
+    n=n+1   
+    //添加显示的内容
+    code.innerHTML = styleCode.substring(0,n)
+    code.innerHTML = Prism.highlight(code.innerHTML, Prism.languages.css, 'css');
+    //添加样式内容
+    styleTag.innerHTML = styleCode.substring(0,n)
+    code.scrollTop = 10000
+    if(n<styleCode.length){
+        setTimeout(fn,during)
+    }else{
+        window.clearTimeout(id) 
+    }
+},during)
+
+var $buttons = $(".buttons")
+
+$buttons.on('click','button',function(e){
+    var $button =$(e.currentTarget)
+    var speed = $button.attr('class')
+    $button.addClass('active').siblings('.active').removeClass('active')
+    switch(speed){
+        case 'slow':
+            during = 150
+            break;
+        case 'normal':
+            during = 80
+            break;
+        case 'fast':
+            during = 20
+            break;
+    }
+
+})
