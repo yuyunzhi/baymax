@@ -1,4 +1,4 @@
-
+//rem获取页面宽度
 var pageWidth=window.innerWidth  //获取屏幕宽度
 document.documentElement.style.fontSize= `${pageWidth/60}px`
 
@@ -290,7 +290,7 @@ var id = setInterval(()=>{
     }
 },30)*/
 
-
+//写code
 var n = 0 
 var during = 100
 var id = setTimeout(function fn(){
@@ -308,22 +308,21 @@ var id = setTimeout(function fn(){
     }
 },during)
 
+//变速
 var $buttons = $(".buttons")
-
 $buttons.on('click','button',function(e){
     var $button =$(e.currentTarget)
     var speed = $button.attr('class')
     $button.addClass('active').siblings('.active').removeClass('active')
     switch(speed){
         case 'slow':
-            during = 150
+            during = 100
             break;
         case 'normal':
-            during = 80
+            during = 50
             break;
         case 'fast':
-            during = 20
+            during = 10
             break;
     }
-
 })
