@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; 
+}
+.token.selector{
+    color :black;
+}
+.token.punctuation{
+    color :black;   
+}
+.token.property{
+    color :black;    
+}
+.token.comment{
+    color :black; 
+}
+html{
+    font-size:13px;
+}
+
+#code{
+    height:100vh;
+    overflow:hidden; 
+   
+}
