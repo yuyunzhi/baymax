@@ -274,21 +274,9 @@ border-radius:0% 0% 50% 30%
 /*喜不喜欢？*/
 /*对了，我叫余咖咖*/
 
+/*谢谢观看*/
 `
-/*
-var n = 0 
-var id = setInterval(()=>{
-    n=n+1   
-    //添加显示的内容
-    code.innerHTML = styleCode.substring(0,n)
-    code.innerHTML = Prism.highlight(code.innerHTML, Prism.languages.css, 'css');
-    //添加样式内容
-    styleTag.innerHTML = styleCode.substring(0,n)
-    code.scrollTop = 10000
-    if(n>styleCode.length){
-        window.clearInterval(id) 
-    }
-},30)*/
+
 
 //写code
 var n = 0 
@@ -319,10 +307,10 @@ $buttons.on('click','button',function(e){
             during = 100
             break;
         case 'normal':
-            during = 50
+            during = 30
             break;
         case 'fast':
-            during = 10
+            during = 1
             break;
     }
 })
