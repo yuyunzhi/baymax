@@ -1,15 +1,15 @@
 
 <h1>如何让代码自动播放同步画一只大白？</h1>
 
+<img src="https://i.loli.net/2018/05/29/5b0ce074dd7bc.png" alt="图" title="大白" />
+
 <p>花了一整天的时间画了大白，成就感还是蛮大的。</p>
 
 <p><strong>关键词：</strong>JavaScript、jQuery、Prism.js、Rem响应式页面 、SASS</p>
 
 <p><strong></strong>动态向 style 标签和 pre 标签添加文本，绘制出大白的过程。用css3实现动画的效果，用prism.js实现代码高亮的效果，用rem实现响应式布局，用sass进行编译。</p>
 
-<strong>源码链接：</strong>
-
-<p>本网页</p>
+<strong>源码链接：</strong><p>本网页</p>
 
 <strong>预览链接：</strong><a href="https://yuyunzhi.github.io/baymax/index.html">大白呀大白</a>
 
