@@ -314,3 +314,5 @@ $buttons.on('click','button',function(e){
             break;
     }
 })
+
+console.log(1)
