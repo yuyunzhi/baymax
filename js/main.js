@@ -316,3 +316,4 @@ $buttons.on('click','button',function(e){
 })
 
 console.log(1)
+console.log(2)
